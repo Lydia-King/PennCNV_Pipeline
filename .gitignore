@@ -1,0 +1,6 @@
+# ref files to ignore
+ref/listofCEL_Real
+ref/File_Sex_Real.txt
+
+# script files to ignore
+scripts/PennCNV_Script_Tidy_Final.sh
