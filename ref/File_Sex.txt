@@ -1,0 +1,5 @@
+_Data_Files_ID-0000.CEL	female
+_Data_Files_ID-0001.CEL	female
+_Data_Files_ID-0002.CEL	female
+_Data_Files_ID-0003.CEL	female
+_Data_Files_ID-0004.CEL	female
