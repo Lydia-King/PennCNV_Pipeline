@@ -5,7 +5,7 @@ This repository contains scripts, ref files and programs needed to run the PennC
 ### **Bin**
 The directory contains the programs used to carry out substep 1.3 and substep 1.4 of the PennCNV-Affy pipeline i.e. to generate canonical genotype clusters and to calculate the LRR values and the BAF values for each marker in each individual, respectively. Substep 1.3 uses generate_affy_geno_cluster.pl and substep 1.4 uses normalize_affy_geno_cluster.pl. These programs can also be obtained from the user guide, link provided above. 
 
-Important: Substeps 1.1 and 1.2 use programs from the Affymetrix Power Tools (APT) software to generate genotyping calls from the raw CEL files and to extract allele-specific signal values from the raw CEL files. These programs are apt-probeset-genotype and apt-probeset-summarize, respectively, and instructions on how to download the APT software package can be found in the user guide, link provided above. 
+**Important:** Substeps 1.1 and 1.2 use programs from the Affymetrix Power Tools (APT) software to generate genotyping calls from the raw CEL files and to extract allele-specific signal values from the raw CEL files. These programs are apt-probeset-genotype and apt-probeset-summarize, respectively, and instructions on how to download the APT software package can be found in the user guide, link provided above. 
 
 ### **Data**
 Store the raw (Affymetrix SNP 6.0) CEL files in this directory. 
