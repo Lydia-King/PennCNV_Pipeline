@@ -1,1 +1,1 @@
-Store raw CEL files in this directory.
+Store the raw (Affymetrix SNP 6.0) CEL files in this directory. 
