@@ -58,3 +58,44 @@ The scripts directory contains the PennCNV_Script.sh script used to run the Penn
 An example of how the script is run to preprocess the data using the 4-step procedure and Hg19 is: `sbatch PennCNV_Script.sh Hg19 4Step`  
 
 **Important:** Accepted arguments for argument 1 include `Hg18`, `Hg19` or `Hg38` and accepted arguments for argument 2 include `3Step` or `4Step`. If anything else is inputted an error will be produced. 
+
+-----
+
+### **To run this pipeline on your own data**
+
+**1.** Clone this repository and navigate into it:
+
+```bash
+git clone https://github.com/Lydia-King/PennCNV_Pipeline
+cd PennCNV_Pipeline
+```
+
+**2.** Setup data directory by downloading/moving raw CEL files into it:
+```bash
+# I had data already downloaded in CEL directory
+mv ../CEL/* data/ 
+```
+
+**3.** Create listofCEL and File_Sex.txt files:
+```bash
+cd data/
+ls *.CEL >> ../ref/listofCEL_temp
+sed 1i'cel_files' ../ref/listofCEL_temp > ../ref/listofCEL
+
+ls *.CEL >> ../ref/File_Sex_temp.txt
+sed 's/$/\tfemale/' ../ref/File_Sex_temp.txt > ../ref/File_Sex.txt
+
+rm ../ref/listofCEL_temp ../ref/File_Sex_temp.txt
+```
+
+**4.** Unzip files in ref folder:
+```bash
+cd ../ref/
+gunzip *.gz
+```
+
+**5.** Submit script with input arguments:
+```bash
+cd ../scripts
+sbatch PennCNV_Script.sh Hg38 4Step
+```
